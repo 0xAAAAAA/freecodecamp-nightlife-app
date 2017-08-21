@@ -1,0 +1,33 @@
+{
+  "name": "fcc-nightlife-app",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Nightlife App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanishqjain1002/freecodecamp-nightlife-app.git"
+  },
+  "author": "Tanishq Jain <tanishqjain100@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanishqjain1002/freecodecamp-nightlife-app/issues"
+  },
+  "homepage": "https://github.com/tanishqjain1002/freecodecamp-nightlife-app#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "mongojs": "^2.4.1",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "zomato": "^1.1.0"
+  }
+}

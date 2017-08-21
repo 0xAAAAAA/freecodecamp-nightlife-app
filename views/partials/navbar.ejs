@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<a class="navbar-brand" href="/">NIGHTLIFE</a>
+
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">Home</a></li>
+			</ul>
+			<% if (!firstname) { %>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="btn btn-info" href="/auth/facebook">Login with Facebook</a></li>
+				</ul>
+			<% } else { %>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="btn btn-info" href="/logout"><%= firstname %> <%= lastname %></a></li>
+				</ul>
+			<% } %>
+		</div>
+	</div>
+</nav>

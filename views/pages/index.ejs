@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<div class="app">
+	<div class="container">
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control input-lg" required id="city" placeholder="Type a city...">
+				<span class="input-group-btn">
+					<button class="btn btn-lg btn-primary" onclick="search()" type="button">Search</button>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row result">
+			
+		</div>
+	</div>
+</div>
+
+<script>
+
+function search() {
+	var query = document.getElementById("city").value;
+	var html = "";
+	$.ajax({
+		type: 'GET',
+		url: '/places?city='+query,
+		success: function(result) {
+			console.log(result);
+			var html = "";
+			if(result.login) {
+				for(var i = 0; i<result.hotel.length; i++) {
+					html += '<div class="row"><p class="lead">'+result.hotel[i].restaurant.name+'</p><p>'+result.hotel[i].restaurant.id+'</p><a href="/going/'+result.hotel[i].restaurant.id+'">[GOING]</a><a href="/notgoing/'+result.hotel[i].id+'">[NOT GOING]</a><p class="text-success">('+result.hotelgoing[i]+' going)</p></div>';
+				}
+			} else { // Not login if end
+
+			}
+			$(".result").html(html);
+		}
+	})
+}
+
+</script>
