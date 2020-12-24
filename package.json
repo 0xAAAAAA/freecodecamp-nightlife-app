@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tanishqjain1002/freecodecamp-nightlife-app#readme",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
